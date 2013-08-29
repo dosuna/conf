@@ -1,2 +1,6 @@
-conf
+## rc files[^†].
 ====
+
+
+
+[^†]: $+[and the like].
