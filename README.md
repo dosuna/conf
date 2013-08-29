@@ -1,6 +1,6 @@
-## rc files[^†].
+## rc files[^1].
 ====
 
 
 
-[^†]: $+[and the like].
+[^1]: $+[and the like].
