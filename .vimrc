@@ -1,6 +1,7 @@
 autocmd VimEnter * QFLoad
 execute pathogen#infect()
 
+set clipboard=unnamed
 
 let fName = expand('%:t')
 let myPath = $HOME . "/" . fName
@@ -30,6 +31,8 @@ set smarttab
 
 set shiftwidth=2
 set ruler
+
+nmap \ :.!pbcopy<CR>
 
 command! -bang -nargs=* W :call W(<q-bang>, <q-args>)
 function! W(bang, filename)
