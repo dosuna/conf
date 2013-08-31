@@ -28,6 +28,7 @@ set nobackup
 set expandtab
 set tabstop=2
 set smarttab
+set textwidth=144
 
 set shiftwidth=2
 set ruler
