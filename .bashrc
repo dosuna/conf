@@ -24,4 +24,8 @@ function ls() {
 # cd to dir then ls
 function cdl { cd $1; ls $1; }
 # multiterm grep
-alias mgrep="grep -i -E '$1.*$2'"
+function mgrep(){
+  arg1=$1;shift
+  arg2=$1;shift
+  grep -RiE '$arg1.*$arg2' "$@";
+}
