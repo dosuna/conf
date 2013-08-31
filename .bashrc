@@ -1,4 +1,5 @@
-force_color_prompt
+export HISTSIZE=9999
+export HISTFILESIZE=999999
 alias documents='cd ~/Documents'
 alias downloads='cd ~/Downloads'
 alias desktop='cd ~/Desktop'
