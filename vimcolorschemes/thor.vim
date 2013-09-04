@@ -51,7 +51,17 @@ if version >= 700 " Vim 7.x specific colors
 endif
 
 " Syntax highlighting
-hi Comment          guifg=#7C7C7C     guibg=black        gui=NONE      ctermfg=darkgray    ctermbg=NONE        cterm=NONE
+"hi Comment          guifg=#7C7C7C     guibg=black        gui=NONE      ctermfg=darkgray    "ctermbg=NONE        cterm=NONE
+if &term == "builtin_gui" || &term == "win32"
+	hi Comment		ctermfg=darkgrey  ctermbg=darkblue
+	hi IncSearch	ctermfg=black ctermbg=grey cterm=NONE
+	hi Search	ctermfg=black ctermbg=darkgrey cterm=NONE
+else
+	hi Comment		ctermfg=grey  ctermbg=darkblue
+	hi IncSearch	ctermfg=yellow ctermbg=darkyellow cterm=NONE
+	hi Search	ctermfg=black ctermbg=darkyellow cterm=NONE
+endif
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "hi String           guifg=#A8FF60     guibg=NONE        gui=NONE      ctermfg=green       ctermbg=NONE        cterm=NONE " Old
 hi String           gui=NONE          guifg=#5dff9e      guibg=#0f291a ctermfg=lightgreen      ctermbg=NONE
 hi Number           guifg=#FF73FD     guibg=NONE        gui=NONE      ctermfg=magenta     ctermbg=NONE        cterm=NONE
