@@ -1,13 +1,30 @@
 autocmd VimEnter * QFLoad
+" autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 execute pathogen#infect()
+filetype plugin indent on
+filetype off
+filetype plugin indent off
+"set runtimepath+=$GOROOT/misc/vim
+filetype plugin indent on
+syntax on
 
 set clipboard=unnamed
+"set paste
+"colorscheme astronaut
+"colorscheme BlackSea
+"colorscheme seashell
+"colorscheme colorzone
+"colorscheme watermark
+""colorscheme golden
+set t_Co=256
+set backspace=indent,eol,start
 
 let fName = expand('%:t')
 let myPath = $HOME . "/" . fName
 
 set encoding=utf-8
 set history=64
+set textwidth=144
 
 "set foldmethod=indent
 "set foldnestmax=10
@@ -17,7 +34,7 @@ set t_Co=256
 set background=dark
 
 set incsearch
-set nocompatible
+"set nocompatible
 let mapleader = ","
 set noswapfile
 set nobackup
@@ -28,7 +45,6 @@ set nobackup
 set expandtab
 set tabstop=2
 set smarttab
-set textwidth=144
 
 set shiftwidth=2
 set ruler
